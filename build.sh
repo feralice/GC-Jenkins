@@ -1,3 +1,8 @@
 #!/bin/bash
+set -e
+
 echo "Começando o build..."
-exit 1  # simulação de falha
+
+python3 -m venv venv
+source venv/bin/activate
+pip install pytest
