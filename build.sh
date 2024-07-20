@@ -6,3 +6,6 @@ echo "Começando o build..."
 python3 -m venv venv
 source venv/bin/activate
 pip install pytest
+
+echo "Executando os testes..."
+pytest --maxfail=1 --disable-warnings -q

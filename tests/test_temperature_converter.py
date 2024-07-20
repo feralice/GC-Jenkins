@@ -1,7 +1,7 @@
 import sys
 import os
 
-# tava dando problema pra encontrar os testes tive que fazer isso abaixo
+# Ajusta o caminho para encontrar o módulo de teste
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import pytest
@@ -19,4 +19,7 @@ def test_celsius_to_fahrenheit():
     assert celsius_to_fahrenheit(100) == pytest.approx(212)
     assert celsius_to_fahrenheit(-40) == pytest.approx(-40)
     assert celsius_to_fahrenheit(37) == pytest.approx(98.6)
-    assert celsius_to_fahrenheit(-17.7778) == pytest.approx(0, abs=1e-4)
+
+    # Colocando um valor errado de proposito
+    assert celsius_to_fahrenheit(-17.7778) == pytest.approx(1, abs=1e-4)
+    
