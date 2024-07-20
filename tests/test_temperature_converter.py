@@ -1,3 +1,9 @@
+import sys
+import os
+
+# tava dando problema pra encontrar os testes tive que fazer isso abaixo
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import pytest
 from temperature_converter import fahrenheit_to_celsius, celsius_to_fahrenheit
 
